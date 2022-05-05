@@ -1,0 +1,20 @@
+<UserControl x:Class="NativeEmbedSample.MainView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="using:NativeEmbedSample.Android"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+  <Expander Header="Button">
+    <StackPanel VerticalAlignment="Top"
+                HorizontalAlignment="Stretch">
+      <Slider Minimum="10" Maximum="500"
+              Value="{Binding #EmbedSample.Width, Mode=TwoWay}" />
+      <Slider Minimum="10" Maximum="500"
+              Value="{Binding #EmbedSample.Height, Mode=TwoWay}" />
+      <local:EmbedSample x:Name="EmbedSample" />
+    </StackPanel>
+  </Expander>
+</UserControl>
